@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: stock
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/stock_example
+    username: root
+    password: test1234
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+    properties:
+      hibernate:
+        format_sql: true
+
+  output:
+    ansi:
+      enabled: ALWAYS
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
